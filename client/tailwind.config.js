@@ -1,18 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: [
+    "./src/**/*.{html,js}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
 
 // /** @type {import('tailwindcss').Config} */
 // export default {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
+//   content: [
+//     // ...
+//     "node_modules/flowbite-react/lib/esm/**/*.js",
+//   ],
+//   plugins: [
+//     // ...
+//     require("flowbite/plugin"),
+//   ],
+// };
